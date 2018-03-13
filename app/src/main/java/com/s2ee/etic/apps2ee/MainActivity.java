@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+        // a change here
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
