@@ -21,8 +21,5 @@ public class ActivityShow extends AppCompatActivity {
         Nom = (TextView) findViewById(R.id.name);Nom.setText(Nom.getText()+ " : "+Ecurrent.getEntreprisenom());
         Adresse = (TextView) findViewById(R.id.adresse);Adresse.setText(Adresse.getText()+" : "+Ecurrent.getEntreprisedescrition());
         Picasso.with(getApplicationContext()).load(Ecurrent.getEntreprisepic()).into(Pic);
-
-
-
     }
 }
