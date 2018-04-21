@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@android:color/black"
     android:layout_height="match_parent"
-    tools:context="com.dz.abdallah.dessigns2ee.MapActivity">
+    tools:context="com.s2ee.etic.apps2ee.MapActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/bar"
         android:layout_width="match_parent"
