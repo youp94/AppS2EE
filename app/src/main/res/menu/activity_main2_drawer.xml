@@ -3,19 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_Agenda"
-            android:icon="@drawable/agenda"
-            android:title="Agenda" />
-        <item
-            android:id="@+id/nav_Entreprise"
-            android:icon="@drawable/icon_entreprise"
-            android:title="Entreprises" />
-        <item
-            android:id="@+id/nav_map"
-            android:icon="@drawable/map"
-            android:title="map" />
-
+        <item android:title="Main">
+            <menu>
+            <item
+                android:id="@+id/nav_Agenda"
+                android:icon="@drawable/agenda"
+                android:title="Agenda" />
+            <item
+                android:id="@+id/nav_Entreprise"
+                android:icon="@drawable/icon_entreprise"
+                android:title="Entreprises" />
+            <item
+                android:id="@+id/nav_map"
+                android:icon="@drawable/map"
+                android:title="map" />
+            </menu>
+        </item>
     </group>
 
     <item android:title="Communicate">

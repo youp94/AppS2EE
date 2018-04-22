@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@android:color/black"
     tools:openDrawer="start">
 
     <include
@@ -20,11 +19,10 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@color/colorPrimaryDark"
         app:headerLayout="@layout/nav_header_main"
         app:elevation="5dp"
         app:itemIconTint="@android:color/holo_blue_bright"
-        app:itemTextColor="@android:color/white"
+        app:itemTextColor="@android:color/black"
         app:menu="@menu/activity_main2_drawer" />
 
 </android.support.v4.widget.DrawerLayout>
