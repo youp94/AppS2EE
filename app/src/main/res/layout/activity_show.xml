@@ -29,19 +29,33 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="80dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/photo"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="80dp"
             android:layout_marginBottom="20dp"
             app:civ_border_color="@android:color/white"
             app:civ_border_width="10dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shapeele"
+                android:text="Nom:"
+                android:layout_marginLeft="50dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+        </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,31 +70,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@drawable/shapeele"
-                        android:text="Nom:"
-                        android:textColor="@android:color/white"
-                        android:textSize="20dp" />
-
-                    <TextView
-                        android:id="@+id/name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Nom"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:background="@drawable/shapeele"
                         android:text="Site web:"
                         android:textColor="@android:color/white"
@@ -90,10 +79,10 @@
                         android:id="@+id/site"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:text="Site"
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -104,8 +93,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/shapeele"
                         android:text="Adresse:"
                         android:textColor="@android:color/white"
@@ -115,11 +103,10 @@
                         android:id="@+id/adresse"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
                         android:text="Adresse"
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -130,7 +117,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/shapeele"
                         android:text="Profiles cherchés:"
                         android:textColor="@android:color/white"
@@ -140,10 +127,10 @@
                         android:id="@+id/profils"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:text="Profiles"
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -154,8 +141,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/shapeele"
                         android:text="Offre d'emplois: "
                         android:textColor="@android:color/white"
@@ -165,31 +151,30 @@
                         android:id="@+id/nb_post_emplois"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
                         android:text="Nombre poste: "
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:id="@+id/vise_emplois"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:text="Profiles visés: "
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:id="@+id/post_emplois"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:text="Postes proposés: "
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -200,8 +185,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:background="@drawable/shapeele"
                         android:text="Offres stages:"
                         android:textColor="@android:color/white"
@@ -211,21 +195,20 @@
                         android:id="@+id/nb_stage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
                         android:text="Nombre de stages:"
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp" />
 
                     <TextView
                         android:id="@+id/types_stage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:text="Stages proposés:"
                         android:textColor="@android:color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginLeft="20dp" />
                 </LinearLayout>
 
             </LinearLayout>
