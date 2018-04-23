@@ -18,8 +18,8 @@ public class ActivityShow extends AppCompatActivity {
         setContentView(R.layout.activity_show);
         Ecurrent = (Entreprise) getIntent().getSerializableExtra("entreprise");
         Pic = (de.hdodenhof.circleimageview.CircleImageView) findViewById(R.id.photo) ;
-        Nom = (TextView) findViewById(R.id.name);Nom.setText(Nom.getText()+ " : "+Ecurrent.getEntreprisenom());
-        Adresse = (TextView) findViewById(R.id.adresse);Adresse.setText(Adresse.getText()+" : "+Ecurrent.getEntreprisedescrition());
+        Nom = (TextView) findViewById(R.id.name);Nom.setText(Ecurrent.getEntreprisenom());
+        Adresse = (TextView) findViewById(R.id.adresse);Adresse.setText(Ecurrent.getEntreprisedescrition());
         Picasso.with(getApplicationContext()).load(Ecurrent.getEntreprisepic()).into(Pic);
     }
 }
