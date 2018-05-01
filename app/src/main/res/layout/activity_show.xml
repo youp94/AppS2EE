@@ -4,216 +4,366 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.s2ee.etic.apps2ee.ActivityShow">
-
+    tools:context="com.s2ee.etic.apps2ee.ActivityShow"
+    android:background="#FFEDD6A6">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
-
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@drawable/colorcard"
             app:popupTheme="@style/AppTheme.NoActionBar" />
-
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="80dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/photo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="20dp"
-            app:civ_border_color="@android:color/white"
-            app:civ_border_width="10dp" />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/shapeele"
-                android:text="Nom:"
-                android:layout_marginLeft="50dp"
-                android:textColor="@android:color/white"
-                android:textSize="20dp" />
-
-        </LinearLayout>
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                app:civ_border_color="@android:color/black"
+                app:civ_border_width="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/map"/>
 
             <LinearLayout
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#FF062E3F"
                 android:orientation="vertical">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/croix1"/>
                     <TextView
+                        android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/shapeele"
-                        android:text="Site web:"
-                        android:textColor="@android:color/white"
-                        android:textSize="20dp" />
-
-                    <TextView
-                        android:id="@+id/site"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Site"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp"/>
+                        android:text="Informations"
+                        android:textSize="30sp"
+                        android:textColor="#FFEDD6A6"/>
                 </LinearLayout>
-
                 <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
                     <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nom"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/shapeele"
-                        android:text="Adresse:"
-                        android:textColor="@android:color/white"
-                        android:textSize="20dp" />
-
+                        android:text="Nom"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Adresse"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
                     <TextView
                         android:id="@+id/adresse"
+                        android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Adresse"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp" />
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Site Web"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/site"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Site Web"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFB53D3F">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/croixbeige1"/>
                     <TextView
+                        android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/shapeele"
-                        android:text="Profiles cherchés:"
-                        android:textColor="@android:color/white"
-                        android:textSize="20dp" />
-
-                    <TextView
-                        android:id="@+id/profils"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Profiles"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp"/>
+                        android:text="Profils recherchés"
+                        android:textSize="30sp"
+                        android:textColor="#FFEDD6A6"/>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:id="@+id/profile_recherche"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profils "
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF062E3F"
+                android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/croix1"/>
                     <TextView
+                        android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/shapeele"
-                        android:text="Offre d'emplois: "
-                        android:textColor="@android:color/white"
-                        android:textSize="20dp" />
-
-                    <TextView
-                        android:id="@+id/nb_post_emplois"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Nombre poste: "
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp" />
-
-                    <TextView
-                        android:id="@+id/vise_emplois"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Profiles visés: "
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp" />
-
-                    <TextView
-                        android:id="@+id/post_emplois"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Postes proposés: "
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp" />
+                        android:text="Offres d'emplois"
+                        android:textSize="30sp"
+                        android:textColor="#FFEDD6A6"/>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre de postes"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/nb_poste"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profiles visés"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/profile_vise"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ICI les profiles"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Postes proposés"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/poste_propose"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ICI les postes"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFB53D3F">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/croixbeige1"/>
                     <TextView
+                        android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/shapeele"
-                        android:text="Offres stages:"
-                        android:textColor="@android:color/white"
-                        android:textSize="20dp" />
-
+                        android:text="Offres stages"
+                        android:textSize="30sp"
+                        android:textColor="#FFEDD6A6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre d'offres de stages"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
                     <TextView
                         android:id="@+id/nb_stage"
+                        android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre de stages:"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp" />
-
+                        android:text="10"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFEDD6A6">
                     <TextView
-                        android:id="@+id/types_stage"
+                        android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Stages proposés:"
-                        android:textColor="@android:color/black"
-                        android:textSize="20dp"
-                        android:layout_marginLeft="20dp" />
+                        android:text="Stages proposés"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/stage_propose"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ICI les stages"
+                        android:textSize="24sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
                 </LinearLayout>
 
             </LinearLayout>
 
-    </LinearLayout>
+        </LinearLayout>
         
     </ScrollView>
 
