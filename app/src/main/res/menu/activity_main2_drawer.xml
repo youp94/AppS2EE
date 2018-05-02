@@ -8,15 +8,15 @@
             <item
                 android:id="@+id/nav_Agenda"
                 android:icon="@drawable/agenda"
-                android:title="Agenda" />
+                android:title="Before S2EE" />
             <item
                 android:id="@+id/nav_Entreprise"
                 android:icon="@drawable/icon_entreprise"
-                android:title="Entreprises" />
+                android:title="Liste des entreprises" />
             <item
                 android:id="@+id/nav_map"
                 android:icon="@drawable/map"
-                android:title="map" />
+                android:title="Carte du S2EE" />
             </menu>
         </item>
     </group>
@@ -26,12 +26,12 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share"
+                android:title="About us"
                 />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Vos avis" />
         </menu>
     </item>
 
