@@ -8,7 +8,8 @@ import java.io.Serializable;
 
 public class Entreprise implements Serializable{
     private String entreprisepic;
-    private String entreprisenom,entreprisedescrition;
+    private String entreprisenom;
+    private String entreprisedescrition;
 
     public Entreprise(String entreprisepic, String entreprisenom, String entreprisedescrition) {
         this.entreprisepic = entreprisepic;
