@@ -31,9 +31,11 @@ public class EnstrepriseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entreprise);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Listes des entreprises");
+
         cardView = (RecyclerView) findViewById(R.id.my_recycler_view);
         entrepriseList = new ArrayList<Entreprise>();
         adapter = new EntrepriseListAdapter(entrepriseList,getApplicationContext());
