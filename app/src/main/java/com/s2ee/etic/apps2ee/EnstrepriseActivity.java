@@ -9,8 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionMenu;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +29,7 @@ public class EnstrepriseActivity extends AppCompatActivity {
     private List<Entreprise> entrepriseList;
     FloatingActionMenu materialDesignFAM;
     com.github.clans.fab.FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3;
-    private Entreprise e1,e2,e3,e4,e5,e6;
+    private DatabaseReference databaseReference;
 
 
 
@@ -32,10 +38,11 @@ public class EnstrepriseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entreprise);
 
+
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Entreprise");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Listes des entreprises");
-
         cardView = (RecyclerView) findViewById(R.id.my_recycler_view);
         entrepriseList = new ArrayList<Entreprise>();
         adapter = new EntrepriseListAdapter(entrepriseList,getApplicationContext());
@@ -43,22 +50,12 @@ public class EnstrepriseActivity extends AppCompatActivity {
         cardView.setLayoutManager(new LinearLayoutManager(this));
         cardView.setItemAnimator(new DefaultItemAnimator());
 
+
+
+
       //code of firebase here
 
 
-       //just examples :)
-        e1 = new Entreprise("https://beta.receiptmatch.com/admin/webresources/images/no_company_image.jpg","Mario","SUPERMARIO");
-        entrepriseList.add(e1);
-        e2 = new Entreprise("http://oi41.tinypic.com/wqq5px.jpg","Luigi","Luigi Land");
-        entrepriseList.add(e2);
-        e3 = new Entreprise("http://oi48.tinypic.com/334oizb.jpg","Wario","Wario Land");
-        entrepriseList.add(e3);
-        e4 = new Entreprise("http://oi64.tinypic.com/2n9yxjb.jpg","Ghost","Ghost Land");
-        entrepriseList.add(e4);
-        e5 = new Entreprise("http://oi57.tinypic.com/16awima.jpg","Cj","San Andreas");
-        entrepriseList.add(e5);
-        e6 = new Entreprise("http://oi39.tinypic.com/20zrwol.jpg","Most Wanted","Los Angelos");
-        entrepriseList.add(e6);
 
 
 
