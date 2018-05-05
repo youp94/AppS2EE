@@ -54,7 +54,49 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
 
       //code of firebase here
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
+
+                Entreprise entreprise=new Entreprise();
+                entreprise.setEntreprisenom(dataSnapshot.child("nom").getValue().toString());
+                entreprise.setMail(dataSnapshot.child("mail").getValue().toString());
+                entreprise.setTel(dataSnapshot.child("tel").getValue().toString());
+                entreprise.setNbposte(dataSnapshot.child("nbPoste").getValue().toString());
+                entreprise.setNbstage(dataSnapshot.child("nbStg").getValue().toString());
+                entreprise.setProfilrechercher(dataSnapshot.child("prflRech").getValue().toString());
+                entreprise.setProfilvise(dataSnapshot.child("prflVise").getValue().toString());
+                entreprise.setStagepropose(dataSnapshot.child("stgPrps").getValue().toString());
+                entreprise.setAdresse(dataSnapshot.child("adr").getValue().toString());
+                entreprise.setWebsite(dataSnapshot.child("web").getValue().toString());
+                entreprise.setPostPrps(dataSnapshot.child("postPrps").getValue().toString());
+                entreprise.setEntreprisepic(dataSnapshot.child("logo").getValue().toString());
+                entrepriseList.add(entreprise);
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
 
 
@@ -69,14 +111,51 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
         floatingActionButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Search type 1
+                //Search Stage
+                for(int i = 0;i < entrepriseList.size();i++)
+                {
+                    for (int j = i ; j < entrepriseList.size();j++)
+                    {
+                        int nbstagei,nbstagej;
+                        nbstagei = Integer.parseInt(entrepriseList.get(i).getNbstage());
+                        nbstagej = Integer.parseInt(entrepriseList.get(j).getNbstage());
+                        if (nbstagei < nbstagej)
+                        {
+                            Entreprise entreprise = entrepriseList.get(i);
+                            entrepriseList.set(i,entrepriseList.get(j));
+                            entrepriseList.set(j,entreprise);
+
+                        }
+
+                    }
+
+                }
+                adapter.notifyDataSetChanged();
 
             }
         });
         floatingActionButton2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Search type 2
+                //Search Poste
+                for(int i = 0;i < entrepriseList.size();i++)
+                {
+                    for (int j = i ; j < entrepriseList.size();j++)
+                    {
+                        int nbpostei,nbpostej;
+                        nbpostei = Integer.parseInt(entrepriseList.get(i).getNbposte());
+                        nbpostej = Integer.parseInt(entrepriseList.get(j).getNbposte());
+                        if (nbpostei < nbpostej)
+                        {
+                            Entreprise entreprise = entrepriseList.get(i);
+                            entrepriseList.set(i,entrepriseList.get(j));
+                            entrepriseList.set(j,entreprise);
 
+                        }
+
+                    }
+
+                }
+                adapter.notifyDataSetChanged();
             }
         });
         floatingActionButton3.setOnClickListener(new View.OnClickListener() {
