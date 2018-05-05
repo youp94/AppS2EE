@@ -30,6 +30,7 @@ public class EnstrepriseActivity extends AppCompatActivity {
     FloatingActionMenu materialDesignFAM;
     com.github.clans.fab.FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3;
     private DatabaseReference databaseReference;
+    private Entreprise e1,e2,e3,e4,e5,e6;
 
 
 
