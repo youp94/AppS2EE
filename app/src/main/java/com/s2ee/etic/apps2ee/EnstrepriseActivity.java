@@ -58,7 +58,19 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
 
 
-
+        //just examples :)
+        e1 = new Entreprise("https://beta.receiptmatch.com/admin/webresources/images/no_company_image.jpg","Mario","SUPERMARIO");
+        entrepriseList.add(e1);
+        e2 = new Entreprise("http://oi41.tinypic.com/wqq5px.jpg","Luigi","Luigi Land");
+        entrepriseList.add(e2);
+        e3 = new Entreprise("http://oi48.tinypic.com/334oizb.jpg","Wario","Wario Land");
+        entrepriseList.add(e3);
+        e4 = new Entreprise("http://oi64.tinypic.com/2n9yxjb.jpg","Ghost","Ghost Land");
+        entrepriseList.add(e4);
+        e5 = new Entreprise("http://oi57.tinypic.com/16awima.jpg","Cj","San Andreas");
+        entrepriseList.add(e5);
+        e6 = new Entreprise("http://oi39.tinypic.com/20zrwol.jpg","Most Wanted","Los Angelos");
+        entrepriseList.add(e6);
 
 
 
