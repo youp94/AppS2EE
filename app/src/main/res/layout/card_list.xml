@@ -41,16 +41,15 @@
         <TextView
             android:id="@+id/EntrepriseNom"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_alignTop="@+id/EntreprisePhoto"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@+id/EntreprisePhoto"
-            android:fontFamily="sans-serif-smallcaps"
             android:text="EntrepriseNom_ici"
             android:textColor="#FFB53D3F"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/vollkorn"/>
 
         <TextView
             android:id="@+id/EntreprisDescritpion"
