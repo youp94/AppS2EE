@@ -30,7 +30,6 @@ public class EnstrepriseActivity extends AppCompatActivity {
     FloatingActionMenu materialDesignFAM;
     com.github.clans.fab.FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3;
     private DatabaseReference databaseReference;
-    private Entreprise e1,e2,e3,e4,e5,e6;
 
 
 
@@ -55,23 +54,53 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
 
       //code of firebase here
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+
+                Entreprise entreprise=new Entreprise();
+                entreprise.setEntreprisenom(dataSnapshot.child("nom").getValue().toString());
+                entreprise.setMail(dataSnapshot.child("mail").getValue().toString());
+                entreprise.setTel(dataSnapshot.child("tel").getValue().toString());
+                entreprise.setNbposte(dataSnapshot.child("nbPoste").getValue().toString());
+                entreprise.setNbstage(dataSnapshot.child("nbStg").getValue().toString());
+                entreprise.setProfilrechercher(dataSnapshot.child("prflRech").getValue().toString());
+                entreprise.setProfilvise(dataSnapshot.child("prflVise").getValue().toString());
+                entreprise.setStagepropose(dataSnapshot.child("stgPrps").getValue().toString());
+                entreprise.setAdresse(dataSnapshot.child("adr").getValue().toString());
+                entreprise.setWebsite(dataSnapshot.child("web").getValue().toString());
+                entreprise.setPostPrps(dataSnapshot.child("postPrps").getValue().toString());
+                entreprise.setEntreprisepic(dataSnapshot.child("logo").getValue().toString());
+                entrepriseList.add(entreprise);
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
 
 
 
-        //just examples :)
-        e1 = new Entreprise("https://beta.receiptmatch.com/admin/webresources/images/no_company_image.jpg","Mario","SUPERMARIO");
-        entrepriseList.add(e1);
-        e2 = new Entreprise("http://oi41.tinypic.com/wqq5px.jpg","Luigi","Luigi Land");
-        entrepriseList.add(e2);
-        e3 = new Entreprise("http://oi48.tinypic.com/334oizb.jpg","Wario","Wario Land");
-        entrepriseList.add(e3);
-        e4 = new Entreprise("http://oi64.tinypic.com/2n9yxjb.jpg","Ghost","Ghost Land");
-        entrepriseList.add(e4);
-        e5 = new Entreprise("http://oi57.tinypic.com/16awima.jpg","Cj","San Andreas");
-        entrepriseList.add(e5);
-        e6 = new Entreprise("http://oi39.tinypic.com/20zrwol.jpg","Most Wanted","Los Angelos");
-        entrepriseList.add(e6);
 
 
 
@@ -82,19 +111,75 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
         floatingActionButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Search type 1
+                //Search Stage
+                for(int i = 0;i < entrepriseList.size();i++)
+                {
+                    for (int j = i ; j < entrepriseList.size();j++)
+                    {
+                        int nbstagei,nbstagej;
+                        nbstagei = Integer.parseInt(entrepriseList.get(i).getNbstage());
+                        nbstagej = Integer.parseInt(entrepriseList.get(j).getNbstage());
+                        if (nbstagei < nbstagej)
+                        {
+                            Entreprise entreprise = entrepriseList.get(i);
+                            entrepriseList.set(i,entrepriseList.get(j));
+                            entrepriseList.set(j,entreprise);
+
+                        }
+
+                    }
+
+                }
+                adapter.notifyDataSetChanged();
 
             }
         });
         floatingActionButton2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Search type 2
+                //Search Poste
+                for(int i = 0;i < entrepriseList.size();i++)
+                {
+                    for (int j = i ; j < entrepriseList.size();j++)
+                    {
+                        int nbpostei,nbpostej;
+                        nbpostei = Integer.parseInt(entrepriseList.get(i).getNbposte());
+                        nbpostej = Integer.parseInt(entrepriseList.get(j).getNbposte());
+                        if (nbpostei < nbpostej)
+                        {
+                            Entreprise entreprise = entrepriseList.get(i);
+                            entrepriseList.set(i,entrepriseList.get(j));
+                            entrepriseList.set(j,entreprise);
 
+                        }
+
+                    }
+
+                }
+                adapter.notifyDataSetChanged();
             }
         });
         floatingActionButton3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Search type 3
+                //Ordre Alphabétique
+                for(int i = 0;i < entrepriseList.size();i++)
+                {
+                    for (int j = i ; j < entrepriseList.size();j++)
+                    {
+                        String nomi,nomj;
+                        nomi = entrepriseList.get(i).getEntreprisenom().toLowerCase();
+                        nomj = entrepriseList.get(j).getEntreprisenom().toLowerCase();
+                        if (nomi.compareTo(nomj) > 0)
+                        {
+                            Entreprise entreprise = entrepriseList.get(i);
+                            entrepriseList.set(i,entrepriseList.get(j));
+                            entrepriseList.set(j,entreprise);
+
+                        }
+
+                    }
+
+                }
+                adapter.notifyDataSetChanged();
 
             }
         });
