@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.s2ee.etic.apps2ee.ActivityShow"
     android:background="#FFEDD6A6">
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:background="@drawable/colorcard"
-            app:popupTheme="@style/AppTheme.NoActionBar" />
-    </android.support.design.widget.AppBarLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,16 +14,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/photo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="20dp"
-                app:civ_border_color="@android:color/black"
-                app:civ_border_width="2dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="80dp"
-                android:src="@drawable/map"/>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:background="@drawable/background_image">
+              <de.hdodenhof.circleimageview.CircleImageView
+                  android:layout_marginVertical="50dp"
+                  android:layout_gravity="center"
+                  android:id="@+id/photo"
+                  android:layout_width="match_parent"
+                  android:layout_height="200dp"
+                  android:layout_marginBottom="20dp"
+                  app:civ_border_color="@android:color/black"
+                  app:civ_border_width="2dp"
+                  android:layout_marginTop="80dp"
+                  android:src="@drawable/map"
+                  />
+
+
+
+          </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_margin="10dp"
@@ -73,7 +73,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Nom"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
@@ -82,7 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nom"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -98,7 +98,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Adresse"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
@@ -107,7 +107,58 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Adresse"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Site Web"
+                        android:textSize="20sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/site"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Site Web"
+                        android:textSize="20sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#FFEDD6A6">
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mail"
+                        android:textSize="20sp"
+                        android:textColor="#FF062E3F"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/mail"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mail"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -123,17 +174,17 @@
                         android:layout_marginLeft="8dp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Site Web"
-                        android:textSize="24sp"
+                        android:text="Tel"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
-                        android:id="@+id/site"
+                        android:id="@+id/tel"
                         android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Site Web"
-                        android:textSize="24sp"
+                        android:text="Tel"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -177,7 +228,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Profils "
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -219,7 +270,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nombre de postes"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
@@ -228,7 +279,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="10"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -244,7 +295,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Profiles visés"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
@@ -253,7 +304,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ICI les profiles"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -270,7 +321,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Postes proposés"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
@@ -279,7 +330,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ICI les postes"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -321,7 +372,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nombre d'offres de stages"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
@@ -330,7 +381,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="10"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -347,7 +398,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Stages proposés"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                     <TextView
@@ -356,7 +407,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ICI les stages"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
                 </LinearLayout>

@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this,MapActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent(this,AboutusActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_send) {
 
         }

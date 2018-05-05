@@ -38,7 +38,7 @@ public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAd
     @Override
     public void onBindViewHolder(final EntrepriseListAdapter.MyViewHolder holder, final int position) {
         final Entreprise current = Lists.get(position);
-        Picasso.with(context).load(current.getEntreprisepic()).into(holder.Pic);
+        if (current.getEntreprisepic() != "/"){Picasso.with(context).load(current.getEntreprisepic()).into(holder.Pic);}
         holder.Nom.setText(current.getEntreprisenom());
         holder.Des.setText(current.getEntreprisedescrition());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
