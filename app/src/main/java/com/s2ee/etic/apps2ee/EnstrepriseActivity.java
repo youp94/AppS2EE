@@ -160,7 +160,26 @@ public class EnstrepriseActivity extends AppCompatActivity {
         });
         floatingActionButton3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Search type 3
+                //Ordre Alphabétique
+                for(int i = 0;i < entrepriseList.size();i++)
+                {
+                    for (int j = i ; j < entrepriseList.size();j++)
+                    {
+                        String nomi,nomj;
+                        nomi = entrepriseList.get(i).getEntreprisenom().toLowerCase();
+                        nomj = entrepriseList.get(j).getEntreprisenom().toLowerCase();
+                        if (nomi.compareTo(nomj) > 0)
+                        {
+                            Entreprise entreprise = entrepriseList.get(i);
+                            entrepriseList.set(i,entrepriseList.get(j));
+                            entrepriseList.set(j,entreprise);
+
+                        }
+
+                    }
+
+                }
+                adapter.notifyDataSetChanged();
 
             }
         });
