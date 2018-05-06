@@ -24,25 +24,27 @@ import java.util.List;
 public class EnstrepriseActivity extends AppCompatActivity {
 
     public Boolean change = false;
+
     private EntrepriseListAdapter adapter;
     private RecyclerView cardView;
     private List<Entreprise> entrepriseList;
+
     FloatingActionMenu materialDesignFAM;
     com.github.clans.fab.FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3;
+    
     private DatabaseReference databaseReference;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entreprise);
 
-
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Entreprise");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Listes des entreprises");
+
         cardView = (RecyclerView) findViewById(R.id.my_recycler_view);
         entrepriseList = new ArrayList<Entreprise>();
         adapter = new EntrepriseListAdapter(entrepriseList,getApplicationContext());
@@ -50,14 +52,10 @@ public class EnstrepriseActivity extends AppCompatActivity {
         cardView.setLayoutManager(new LinearLayoutManager(this));
         cardView.setItemAnimator(new DefaultItemAnimator());
 
-
-
-
-      //code of firebase here
+        //code of firebase here
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-
 
                 Entreprise entreprise=new Entreprise();
                 entreprise.setEntreprisenom(dataSnapshot.child("nom").getValue().toString());
@@ -98,12 +96,6 @@ public class EnstrepriseActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
         materialDesignFAM = (FloatingActionMenu) findViewById(R.id.material_design_android_floating_action_menu);
         floatingActionButton1 = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item1);
         floatingActionButton2 = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item2);
@@ -131,7 +123,6 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
                 }
                 adapter.notifyDataSetChanged();
-
             }
         });
         floatingActionButton2.setOnClickListener(new View.OnClickListener() {
@@ -180,7 +171,6 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
                 }
                 adapter.notifyDataSetChanged();
-
             }
         });
     }

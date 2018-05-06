@@ -15,15 +15,18 @@
         <activity android:name=".EnstrepriseActivity" />
         <activity android:name=".ActivityShow" />
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".AgendaActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".AboutusActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AgendaActivity" />
-        <activity android:name=".MapActivity" />
-        <activity android:name=".AboutusActivity"></activity>
     </application>
 
 </manifest>
