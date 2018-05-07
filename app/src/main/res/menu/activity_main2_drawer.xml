@@ -36,6 +36,10 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Vos avis" />
+            <item
+                android:id="@+id/nav_share_fb"
+                android:icon="@drawable/ic_menu_share"
+                android:title="share" />
         </menu>
     </item>
 

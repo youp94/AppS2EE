@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EnstrepriseActivity" />
         <activity android:name=".ShowActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".AgendaActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".AboutusActivity" />
@@ -25,7 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FavouritActivity"></activity>
+        <activity android:name=".FavouritActivity" />
+        <activity android:name=".SendActivity"></activity>
     </application>
 
 </manifest>

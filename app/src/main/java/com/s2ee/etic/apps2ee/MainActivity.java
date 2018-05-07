@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -66,7 +65,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this,AboutusActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(this,SendActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
