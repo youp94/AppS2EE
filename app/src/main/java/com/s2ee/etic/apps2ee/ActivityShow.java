@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.like.LikeButton;
+import com.like.OnLikeListener;
 import com.squareup.picasso.Picasso;
 
 public class ActivityShow extends AppCompatActivity {
@@ -13,7 +15,9 @@ public class ActivityShow extends AppCompatActivity {
     private Entreprise Ecurrent;
     private TextView Nom,Adresse,mail,tel,web,adr,nbposte,nbstage,stagepropose,profilvise,profilrech,postprps;
     private de.hdodenhof.circleimageview.CircleImageView Pic;
-    private ImageView btnLike;
+    private LikeButton btnLike;
+
+    private boolean liked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +37,16 @@ public class ActivityShow extends AppCompatActivity {
         profilvise = (TextView) findViewById(R.id.profile_vise);profilvise.setText(Ecurrent.getProfilvise());
         postprps = (TextView) findViewById(R.id.poste_propose); postprps.setText(Ecurrent.getPostPrps());
        if (Ecurrent.getEntreprisepic() != "/"){ Picasso.with(getApplicationContext()).load(Ecurrent.getEntreprisepic()).into(Pic);}
-       btnLike = findViewById(R.id.btn_dis);
-       btnLike.setOnClickListener(new View.OnClickListener() {
+       btnLike = findViewById(R.id.star_button);
+       btnLike.setOnLikeListener(new OnLikeListener() {
            @Override
-           public void onClick(View view) {
-               Integer integer = (Integer) btnLike.getTag();
-               integer = integer == null ? 0 : integer;
-                    btnLike.setImageResource(R.drawable.like);
+           public void liked(LikeButton likeButton) {
+               
+           }
+
+           @Override
+           public void unLiked(LikeButton likeButton) {
+
            }
        });
     }

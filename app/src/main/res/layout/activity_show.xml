@@ -35,18 +35,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Interessé"
+                android:text="Ajouter aux favoris"
                 android:textColor="#FFB53D3F"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="22sp"/>
-            <ImageView
-                android:id="@+id/btn_dis"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/dislike"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"/>
+            <com.like.LikeButton
+                app:icon_type="Star"
+                app:icon_size="25dp"
+                android:id="@+id/star_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
             <LinearLayout
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
