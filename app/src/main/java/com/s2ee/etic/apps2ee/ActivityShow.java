@@ -25,11 +25,20 @@ import java.util.Random;
 public class ActivityShow extends AppCompatActivity {
 
     private Entreprise Ecurrent;
-    private TextView Nom,Adresse,mail,tel,web,adr,nbposte,nbstage,stagepropose,profilvise,profilrech,postprps;
+    private TextView nom;
+    private TextView mail;
+    private TextView tel;
+    private TextView web;
+    private TextView adr;
+    private TextView nbposte;
+    private TextView nbstage;
+    private TextView stagepropose;
+    private TextView profilvise;
+    private TextView profilrech;
+    private TextView postprps;
     private de.hdodenhof.circleimageview.CircleImageView Pic;
-    private LikeButton btnLike;
 
-    private boolean liked = false;
+    private LikeButton btnLike;
     private ArrayList<Entreprise> interested = new ArrayList<>();
 
     String ID;
@@ -43,18 +52,41 @@ public class ActivityShow extends AppCompatActivity {
         setContentView(R.layout.activity_show);
 
         Ecurrent = (Entreprise) getIntent().getSerializableExtra("entreprise");
+
+        nom = (TextView) findViewById(R.id.name);
+        nom.setText(Ecurrent.getEntreprisenom());
+
+        mail = (TextView) findViewById(R.id.mail);
+        mail.setText(Ecurrent.getMail());
+
+        tel = (TextView) findViewById(R.id.tel);
+        tel.setText(Ecurrent.getTel());
+
+        web = (TextView) findViewById(R.id.site);
+        web.setText(Ecurrent.getWebsite());
+
+        adr = (TextView) findViewById(R.id.adresse);
+        adr.setText(Ecurrent.getAdresse());
+
+        nbposte  = (TextView) findViewById(R.id.nb_poste);
+        nbposte.setText(Ecurrent.getNbposte());
+
+        nbstage  = (TextView) findViewById(R.id.nb_stage);
+        nbstage.setText(Ecurrent.getNbstage());
+
+        profilrech = (TextView) findViewById(R.id.profile_recherche);
+        profilrech.setText(Ecurrent.getProfilrechercher());
+
+        stagepropose = (TextView) findViewById(R.id.stage_propose);
+        stagepropose.setText(Ecurrent.getStagepropose());
+
+        profilvise = (TextView) findViewById(R.id.profile_vise);
+        profilvise.setText(Ecurrent.getProfilvise());
+
+        postprps = (TextView) findViewById(R.id.poste_propose);
+        postprps.setText(Ecurrent.getPostPrps());
+
         Pic = (de.hdodenhof.circleimageview.CircleImageView) findViewById(R.id.photo) ;
-        Nom = (TextView) findViewById(R.id.name);Nom.setText(Ecurrent.getEntreprisenom());
-        mail = (TextView) findViewById(R.id.mail);mail.setText(Ecurrent.getMail());
-        tel = (TextView) findViewById(R.id.tel);tel.setText(Ecurrent.getTel());
-        web = (TextView) findViewById(R.id.site);web.setText(Ecurrent.getWebsite());
-        adr = (TextView) findViewById(R.id.adresse);adr.setText(Ecurrent.getAdresse());
-        nbposte  = (TextView) findViewById(R.id.nb_poste);nbposte.setText(Ecurrent.getNbposte());
-        nbstage  = (TextView) findViewById(R.id.nb_stage);nbstage.setText(Ecurrent.getNbstage());
-        profilrech = (TextView) findViewById(R.id.profile_recherche);profilrech.setText(Ecurrent.getProfilrechercher());
-        stagepropose = (TextView) findViewById(R.id.stage_propose);stagepropose.setText(Ecurrent.getStagepropose());
-        profilvise = (TextView) findViewById(R.id.profile_vise);profilvise.setText(Ecurrent.getProfilvise());
-        postprps = (TextView) findViewById(R.id.poste_propose); postprps.setText(Ecurrent.getPostPrps());
         if (Ecurrent.getEntreprisepic() != "/"){
             Picasso.with(getApplicationContext()).load(Ecurrent.getEntreprisepic()).into(Pic);}
 
@@ -95,10 +127,6 @@ public class ActivityShow extends AppCompatActivity {
        btnLike.setOnLikeListener(new OnLikeListener() {
            @Override
            public void liked(LikeButton likeButton) {
-               Random r = new Random();
-               int i1 = r.nextInt(1000000);
-               String child = String.valueOf(i1);
-
                mDatabase.child("interested").child(Ecurrent.getEntreprisenom()).setValue(Ecurrent);
            }
 
