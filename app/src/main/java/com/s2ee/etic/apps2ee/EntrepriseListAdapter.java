@@ -44,7 +44,7 @@ public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAd
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent go = new Intent( context, ActivityShow.class);
+                Intent go = new Intent( context, ShowActivity.class);
                 go.putExtra("entreprise",current);
                 v.getContext().startActivity(go);
             }

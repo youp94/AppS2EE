@@ -55,8 +55,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_Entreprise) {
             Intent intent = new Intent(this,EnstrepriseActivity.class);
             startActivity(intent);
-
-        } else if (id == R.id.nav_map) {
+        }
+        else if (id == R.id.favoris){
+            Intent intent = new Intent(this,FavouritActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_map) {
             Intent intent = new Intent(this,MapActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {

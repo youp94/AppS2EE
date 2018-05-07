@@ -13,10 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".EnstrepriseActivity" />
-        <activity android:name=".ActivityShow" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".ShowActivity" />
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".AgendaActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".AboutusActivity" />
@@ -27,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FavouritActivity"></activity>
     </application>
 
 </manifest>

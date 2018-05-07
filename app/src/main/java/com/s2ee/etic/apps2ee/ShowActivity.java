@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-public class ActivityShow extends AppCompatActivity {
+public class ShowActivity extends AppCompatActivity {
 
     private Entreprise Ecurrent;
     private TextView nom;
