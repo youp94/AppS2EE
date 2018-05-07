@@ -1,5 +1,7 @@
 package com.s2ee.etic.apps2ee;
 
+import java.util.ArrayList;
+
 public class User {
 
     String userId;

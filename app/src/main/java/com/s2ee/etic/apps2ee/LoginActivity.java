@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class LoginActivity extends AppCompatActivity {
 
     SignInButton signInButton;
@@ -79,8 +81,10 @@ public class LoginActivity extends AppCompatActivity {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             if(account != null) {
                 Toast.makeText(this, "Signed in successfully", Toast.LENGTH_LONG).show();
+
                 User u = new User(account.getId(), account.getEmail(), account.getDisplayName());
                 mDatabase.child(String.valueOf(account.getId())).setValue(u);
+
                 updateUI(account);
             }
         } catch (ApiException e) {

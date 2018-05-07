@@ -77,24 +77,24 @@
             android:id="@+id/material_design_floating_action_menu_item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/btn_star_big_on"
-            fab:fab_label="offre Stage"
+            android:src="@drawable/strategy"
+            fab:fab_label="Stage"
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/material_design_floating_action_menu_item2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/cap"
-            fab:fab_label="offre Poste"
+            android:src="@drawable/manager"
+            fab:fab_label="Emploi"
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/material_design_floating_action_menu_item3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/arrow_down_float"
-            fab:fab_label="Search type 3"
+            android:src="@drawable/alphabet"
+            fab:fab_label="Ordre alphabétique"
             fab:fab_size="mini" />
     </com.github.clans.fab.FloatingActionMenu>
 
