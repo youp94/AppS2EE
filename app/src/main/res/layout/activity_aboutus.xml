@@ -55,6 +55,7 @@
                   android:layout_height="match_parent"
                   android:background="@drawable/colorcardraduis">
                   <TextView
+                      android:layout_margin="10dp"
                       android:layout_width="match_parent"
                       android:id="@+id/A1"
                       android:textColor="#FF062000"
@@ -87,6 +88,7 @@
                   android:layout_height="match_parent"
                   android:background="@drawable/colorcardraduis">
                   <TextView
+                      android:layout_margin="10dp"
                       android:layout_width="match_parent"
                       android:id="@+id/A2"
                       android:layout_height="match_parent"
@@ -120,6 +122,7 @@
                   android:layout_height="match_parent"
                   android:background="@drawable/colorcardraduis">
                   <TextView
+                      android:layout_margin="10dp"
                       android:layout_width="match_parent"
                       android:id="@+id/A3"
                       android:textColor="#FF062000"

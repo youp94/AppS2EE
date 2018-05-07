@@ -49,9 +49,10 @@
             android:text="EntrepriseNom_ici"
             android:textColor="#FFB53D3F"
             android:textSize="25dp"
-            android:fontFamily="@font/vollkorn"/>
+            android:fontFamily="@font/goboldregular"/>
 
         <TextView
+            android:fontFamily="@font/goboldregular"
             android:id="@+id/EntreprisDescritpion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

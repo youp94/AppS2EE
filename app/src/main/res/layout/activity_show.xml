@@ -33,6 +33,7 @@
                     android:src="@drawable/map" />
             </LinearLayout>
             <TextView
+                android:fontFamily="@font/goboldregular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ajouter aux favoris"
@@ -64,6 +65,7 @@
                         android:layout_height="25dp"
                         android:src="@drawable/croix1"/>
                     <TextView
+                        android:fontFamily="@font/goboldregular"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -247,6 +249,7 @@
                         android:layout_height="25dp"
                         android:src="@drawable/croixbeige1"/>
                     <TextView
+                        android:fontFamily="@font/goboldregular"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -291,6 +294,7 @@
                         android:layout_height="25dp"
                         android:src="@drawable/croix1"/>
                     <TextView
+                        android:fontFamily="@font/goboldregular"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -421,6 +425,7 @@
                         android:layout_height="25dp"
                         android:src="@drawable/croixbeige1"/>
                     <TextView
+                        android:fontFamily="@font/goboldregular"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

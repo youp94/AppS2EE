@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFB53D3F"
     tools:context="com.s2ee.etic.apps2ee.MapActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/bar"
@@ -20,4 +21,22 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="196dp"
+        android:text="Coming soon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar"
+        app:layout_constraintVertical_bias="0.024"
+        android:textSize="30sp"
+        android:textColor="#FFEDD6A6"
+        android:fontFamily="@font/goboldregular"/>
 </android.support.constraint.ConstraintLayout>
