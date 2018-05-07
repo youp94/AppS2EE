@@ -69,10 +69,10 @@ public class ActivityShow extends AppCompatActivity {
         adr.setText(Ecurrent.getAdresse());
 
         nbposte  = (TextView) findViewById(R.id.nb_poste);
-        nbposte.setText(Ecurrent.getNbposte());
+        nbposte.setText(Ecurrent.getNbposte()+ " postes");
 
         nbstage  = (TextView) findViewById(R.id.nb_stage);
-        nbstage.setText(Ecurrent.getNbstage());
+        nbstage.setText(Ecurrent.getNbstage()+ " postes");
 
         profilrech = (TextView) findViewById(R.id.profile_recherche);
         profilrech.setText(Ecurrent.getProfilrechercher());

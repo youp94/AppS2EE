@@ -78,11 +78,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFEDD6A6">
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/circle"/>
                     <TextView
                         android:layout_marginLeft="8dp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Nom"
+                        android:text="Nom:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -103,11 +109,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFEDD6A6">
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/circle"/>
                     <TextView
                         android:layout_marginLeft="8dp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Adresse"
+                        android:text="Adresse:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -129,11 +141,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFEDD6A6">
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/circle"/>
                     <TextView
                         android:layout_marginLeft="8dp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Site Web"
+                        android:text="Site Web:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -154,11 +172,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFEDD6A6">
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/circle"/>
                     <TextView
                         android:layout_marginLeft="8dp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Mail"
+                        android:text="Mail:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -180,11 +204,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFEDD6A6">
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/circle"/>
                     <TextView
                         android:layout_marginLeft="8dp"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Tel"
+                        android:text="Tel:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -275,11 +305,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFEDD6A6">
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/circle"/>
                     <TextView
                         android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre de postes"
+                        android:text="Nombre de postes:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -300,14 +336,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="#FFEDD6A6">
-                    <TextView
-                        android:layout_marginLeft="8dp"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Profiles visés"
-                        android:textSize="20sp"
-                        android:textColor="#FF062E3F"
-                        android:textStyle="bold"/>
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/circle"/>
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Profiles visés:"
+                            android:textSize="20sp"
+                            android:textColor="#FF062E3F"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
                     <TextView
                         android:id="@+id/profile_vise"
                         android:layout_marginLeft="8dp"
@@ -326,14 +373,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="#FFEDD6A6">
-                    <TextView
-                        android:layout_marginLeft="8dp"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Postes proposés"
-                        android:textSize="20sp"
-                        android:textColor="#FF062E3F"
-                        android:textStyle="bold"/>
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/circle"/>
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Postes proposés:"
+                            android:textSize="20sp"
+                            android:textColor="#FF062E3F"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
                     <TextView
                         android:id="@+id/poste_propose"
                         android:layout_marginLeft="8dp"
@@ -377,11 +435,17 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="#FFEDD6A6">
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/circle"/>
                     <TextView
                         android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre d'offres de stages"
+                        android:text="Nombre d'offres de stages:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -403,14 +467,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="#FFEDD6A6">
-                    <TextView
-                        android:layout_marginLeft="8dp"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Stages proposés"
-                        android:textSize="20sp"
-                        android:textColor="#FF062E3F"
-                        android:textStyle="bold"/>
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/circle"/>
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stages proposés:"
+                            android:textSize="20sp"
+                            android:textColor="#FF062E3F"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
                     <TextView
                         android:id="@+id/stage_propose"
                         android:layout_marginLeft="8dp"
