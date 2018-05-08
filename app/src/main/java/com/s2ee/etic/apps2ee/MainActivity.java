@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
             Intent intent = new Intent(this,SendActivity.class);
             startActivity(intent);
+        }else if (id == R.id.nav_share_fb) {
+            Intent intent = new Intent(this,ShareActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
