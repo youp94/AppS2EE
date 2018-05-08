@@ -127,12 +127,12 @@ public class ShowActivity extends AppCompatActivity {
        btnLike.setOnLikeListener(new OnLikeListener() {
            @Override
            public void liked(LikeButton likeButton) {
-               mDatabase.child("interested").child(Ecurrent.getEntreprisenom()).setValue(Ecurrent);
+               mDatabase.child("interested").child(Ecurrent.getEntreprisenom().replace('.','_')).setValue(Ecurrent);
            }
 
            @Override
            public void unLiked(LikeButton likeButton) {
-               mDatabase.child("interested").child(Ecurrent.getEntreprisenom()).removeValue();
+               mDatabase.child("interested").child(Ecurrent.getEntreprisenom().replace('.','_')).removeValue();
            }
        });
     }
