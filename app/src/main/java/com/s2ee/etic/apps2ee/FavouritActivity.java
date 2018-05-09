@@ -44,7 +44,7 @@ public class FavouritActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Listes des entreprises");
+        getSupportActionBar().setTitle("Mes favoris");
 
         cardView = (RecyclerView) findViewById(R.id.my_recycler_view_user);
         entrepriseList = new ArrayList<Entreprise>();

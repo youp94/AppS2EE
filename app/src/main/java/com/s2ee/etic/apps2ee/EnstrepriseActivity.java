@@ -43,7 +43,7 @@ public class EnstrepriseActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Mes favoris");
+        getSupportActionBar().setTitle("Entreprises");
 
         cardView = (RecyclerView) findViewById(R.id.my_recycler_view);
         entrepriseList = new ArrayList<Entreprise>();

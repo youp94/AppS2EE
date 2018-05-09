@@ -12,7 +12,7 @@
                 <item
                     android:id="@+id/nav_Entreprise"
                     android:icon="@drawable/icon_entreprise"
-                    android:title="Liste des entreprises" />
+                    android:title="Entreprises" />
                 <item
                     android:id="@+id/favoris"
                     android:icon="@drawable/ic_favorite"
