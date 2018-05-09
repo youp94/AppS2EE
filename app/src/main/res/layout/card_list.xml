@@ -61,7 +61,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="7dp"
             android:layout_toEndOf="@+id/EntreprisePhoto"
             android:text="EntrepriseDescrition_ici"
             android:textColor="#FF062E3F"

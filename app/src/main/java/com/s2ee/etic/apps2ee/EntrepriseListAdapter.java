@@ -40,7 +40,7 @@ public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAd
         final Entreprise current = Lists.get(position);
         if (current.getEntreprisepic() != "/"){Picasso.with(context).load(current.getEntreprisepic()).into(holder.Pic);}
         holder.Nom.setText(current.getEntreprisenom());
-        holder.Des.setText(current.getEntreprisedescrition());
+        holder.Des.setText(current.getNbstage()+" offres de stage et "+current.getNbposte()+ " offres d'emploi");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

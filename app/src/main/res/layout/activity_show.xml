@@ -319,7 +319,7 @@
                         android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre de postes:"
+                        android:text="Offres d'emplois:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
@@ -450,7 +450,7 @@
                         android:layout_marginLeft="8dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nombre d'offres de stages:"
+                        android:text="Offres stages:"
                         android:textSize="20sp"
                         android:textColor="#FF062E3F"
                         android:textStyle="bold"/>
