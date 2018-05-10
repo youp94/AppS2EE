@@ -58,7 +58,7 @@
                       android:layout_margin="10dp"
                       android:layout_width="match_parent"
                       android:id="@+id/A1"
-                      android:textColor="#FFB53D3F"
+                      android:textColor="#FF062000"
                       android:layout_height="match_parent"
                       android:textSize="20dp"/>
               </LinearLayout>
@@ -92,7 +92,7 @@
                       android:layout_width="match_parent"
                       android:id="@+id/A2"
                       android:layout_height="match_parent"
-                      android:textColor="#FFB53D3F"
+                      android:textColor="#FF062000"
                       android:textSize="20dp"/>
               </LinearLayout>
 
@@ -124,7 +124,7 @@
                       android:layout_margin="10dp"
                       android:layout_width="match_parent"
                       android:id="@+id/A3"
-                      android:textColor="#FFB53D3F"
+                      android:textColor="#FF062000"
                       android:layout_height="match_parent"
                       android:textSize="20dp"/>
               </LinearLayout>
