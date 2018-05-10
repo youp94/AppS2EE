@@ -95,8 +95,11 @@ public class ShowActivity extends AppCompatActivity {
         postprps.setText(Ecurrent.getPostPrps());
 
         Pic = (de.hdodenhof.circleimageview.CircleImageView) findViewById(R.id.photo) ;
-        if (Ecurrent.getEntreprisepic() != "/"){
-            Picasso.with(getApplicationContext()).load(Ecurrent.getEntreprisepic()).into(Pic);}
+        if (!Ecurrent.getEntreprisepic().equals("/")){
+            Picasso.with(getApplicationContext()).load(Ecurrent.getEntreprisepic()).into(Pic);
+        }else{
+            Pic.setImageResource(R.drawable.blank);
+        }
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if(account != null) {

@@ -1,5 +1,6 @@
 package com.s2ee.etic.apps2ee;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -12,10 +13,6 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-/**
- * don't change here
- */
 
 public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAdapter.MyViewHolder> {
 
@@ -35,10 +32,15 @@ public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAd
         return holder;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(final EntrepriseListAdapter.MyViewHolder holder, final int position) {
         final Entreprise current = Lists.get(position);
-        if (current.getEntreprisepic() != "/"){Picasso.with(context).load(current.getEntreprisepic()).into(holder.Pic);}
+        if (!current.getEntreprisepic().equals("/")){
+            Picasso.with(context).load(current.getEntreprisepic()).into(holder.Pic);
+        }else{
+            holder.Pic.setImageResource(R.drawable.blank);
+        }
         holder.Nom.setText(current.getEntreprisenom());
         if(current.getNbposte().equals("1") && !current.getNbstage().equals("1")) {
             holder.Des.setText(current.getNbstage() + " offres de stage\n" + current.getNbposte() + " offre d'emploi");
@@ -64,7 +66,6 @@ public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAd
         return Lists.size();
     }
 
-
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private ImageView Pic;
         private TextView Nom,Des;
@@ -74,9 +75,6 @@ public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAd
             this.Pic = (ImageView) itemView.findViewById(R.id.EntreprisePhoto);
             this.Nom = (TextView) itemView.findViewById(R.id.EntrepriseNom);
             this.Des = (TextView) itemView.findViewById(R.id.EntreprisDescritpion);
-
         }
-
-
     }
 }
