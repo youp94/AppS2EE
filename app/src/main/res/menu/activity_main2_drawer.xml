@@ -30,7 +30,7 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/logo"
-                android:title="About us"
+                android:title="A propos"
                 />
             <item
                 android:id="@+id/nav_send"

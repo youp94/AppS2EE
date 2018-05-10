@@ -40,7 +40,15 @@ public class EntrepriseListAdapter extends RecyclerView.Adapter<EntrepriseListAd
         final Entreprise current = Lists.get(position);
         if (current.getEntreprisepic() != "/"){Picasso.with(context).load(current.getEntreprisepic()).into(holder.Pic);}
         holder.Nom.setText(current.getEntreprisenom());
-        holder.Des.setText(current.getNbstage()+" offres de stage et "+current.getNbposte()+ " offres d'emploi");
+        if(current.getNbposte().equals("1") && !current.getNbstage().equals("1")) {
+            holder.Des.setText(current.getNbstage() + " offres de stage\n" + current.getNbposte() + " offre d'emploi");
+        }else if(!current.getNbposte().equals("1") && current.getNbstage().equals("1")){
+            holder.Des.setText(current.getNbstage() + " offre de stage\n" + current.getNbposte() + " offres d'emploi");
+        }else if(current.getNbposte().equals("1") && current.getNbstage().equals("1")){
+            holder.Des.setText(current.getNbstage() + " offre de stage\n" + current.getNbposte() + " offre d'emploi");
+        }else{
+            holder.Des.setText(current.getNbstage() + " offres de stage\n" + current.getNbposte() + " offres d'emploi");
+        }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

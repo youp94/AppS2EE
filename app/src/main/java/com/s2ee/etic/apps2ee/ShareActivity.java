@@ -1,5 +1,8 @@
 package com.s2ee.etic.apps2ee;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,8 +53,17 @@ public class ShareActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDatabase.setValue(user);
-                Toast.makeText(getApplicationContext(), "Participation confirmée, Merci", Toast.LENGTH_LONG).show();
+                ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+                if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() ==
+                        NetworkInfo.State.CONNECTED ||
+                        connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() ==
+                                NetworkInfo.State.CONNECTED){
+                    mDatabase.setValue(user);
+                    Toast.makeText(getApplicationContext(), "Participation confirmée, Merci", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Vérifiez votre connexion inernet", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

@@ -1,5 +1,8 @@
 package com.s2ee.etic.apps2ee;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -55,9 +58,18 @@ public class SendActivity extends AppCompatActivity {
                 int i1 = r.nextInt(1000000);
                 String child = String.valueOf(i1);
 
-                mDatabase.child("Messages").child(child).setValue(message);
-                editText.setText("");
-                Toast.makeText(getApplicationContext(), "Message envoyé avec succsés !", Toast.LENGTH_LONG).show();
+                ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+                if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() ==
+                        NetworkInfo.State.CONNECTED ||
+                        connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() ==
+                                NetworkInfo.State.CONNECTED){
+                    mDatabase.child("Messages").child(child).setValue(message);
+                    editText.setText("");
+                    Toast.makeText(getApplicationContext(), "Message envoyé avec succés !", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Vérifiez votre connexion inernet", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

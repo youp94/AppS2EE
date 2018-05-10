@@ -1,5 +1,6 @@
 package com.s2ee.etic.apps2ee;
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -60,18 +61,18 @@ public class EnstrepriseActivity extends AppCompatActivity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
                 Entreprise entreprise=new Entreprise();
-                entreprise.setEntreprisenom(dataSnapshot.child("nom").getValue().toString());
-                entreprise.setMail(dataSnapshot.child("mail").getValue().toString());
-                entreprise.setTel(dataSnapshot.child("tel").getValue().toString());
-                entreprise.setNbposte(dataSnapshot.child("nbPoste").getValue().toString());
-                entreprise.setNbstage(dataSnapshot.child("nbStg").getValue().toString());
-                entreprise.setProfilrechercher(dataSnapshot.child("prflRech").getValue().toString());
-                entreprise.setProfilvise(dataSnapshot.child("prflVise").getValue().toString());
-                entreprise.setStagepropose(dataSnapshot.child("stgPrps").getValue().toString());
-                entreprise.setAdresse(dataSnapshot.child("adr").getValue().toString());
-                entreprise.setWebsite(dataSnapshot.child("web").getValue().toString());
-                entreprise.setPostPrps(dataSnapshot.child("postPrps").getValue().toString());
-                entreprise.setEntreprisepic(dataSnapshot.child("logo").getValue().toString());
+                entreprise.setEntreprisenom(dataSnapshot.child("nom").getValue(String.class));
+                entreprise.setMail(dataSnapshot.child("mail").getValue(String.class));
+                entreprise.setTel(String.valueOf(dataSnapshot.child("tel").getValue(Long.class)));
+                entreprise.setNbposte(String.valueOf(dataSnapshot.child("nbPoste").getValue(Long.class)));
+                entreprise.setNbstage(String.valueOf(dataSnapshot.child("nbStg").getValue(Long.class)));
+                entreprise.setProfilrechercher(dataSnapshot.child("prflRech").getValue(String.class));
+                entreprise.setProfilvise(dataSnapshot.child("prflVise").getValue(String.class));
+                entreprise.setStagepropose(dataSnapshot.child("stgPrps").getValue(String.class));
+                entreprise.setAdresse(dataSnapshot.child("adr").getValue(String.class));
+                entreprise.setWebsite(dataSnapshot.child("web").getValue(String.class));
+                entreprise.setPostPrps(dataSnapshot.child("postPrps").getValue(String.class));
+                entreprise.setEntreprisepic(dataSnapshot.child("logo").getValue(String.class));
                 entrepriseList.add(entreprise);
                 adapter.notifyDataSetChanged();
             }

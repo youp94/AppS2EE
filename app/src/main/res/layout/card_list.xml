@@ -48,7 +48,7 @@
             android:layout_toEndOf="@+id/EntreprisePhoto"
             android:text="EntrepriseNom_ici"
             android:textColor="#FFB53D3F"
-            android:textSize="25dp"
+            android:textSize="14sp"
             android:fontFamily="@font/goboldregular"/>
 
         <TextView
@@ -65,7 +65,7 @@
             android:layout_toEndOf="@+id/EntreprisePhoto"
             android:text="EntrepriseDescrition_ici"
             android:textColor="#FF062E3F"
-            android:textSize="15dp" />
+            android:textSize="12sp" />
 
     </RelativeLayout>
 

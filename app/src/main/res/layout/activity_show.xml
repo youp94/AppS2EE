@@ -7,7 +7,23 @@
     tools:context="com.s2ee.etic.apps2ee.ShowActivity"
     android:background="#FFEDD6A6">
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/colorcard"
+            android:paddingBottom="1dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
     <ScrollView
+        android:layout_below="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
