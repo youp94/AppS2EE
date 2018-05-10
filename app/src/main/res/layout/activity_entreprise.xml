@@ -55,7 +55,7 @@
         fab:menu_colorNormal="#28235c"
         fab:menu_colorPressed="#dc4b3f"
         fab:menu_colorRipple="#99d4d4d4"
-        fab:menu_fab_label="Floating Action Menu"
+        fab:menu_fab_label="Filtrer les entreprises"
         fab:menu_fab_size="normal"
         fab:menu_labels_colorNormal="#333"
         fab:menu_labels_colorPressed="#444"
