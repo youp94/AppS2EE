@@ -180,8 +180,7 @@
                         android:layout_height="wrap_content"
                         android:text="Site Web"
                         android:textSize="20sp"
-                        android:textColor="#FF062E3F"
-                        android:textStyle="bold"/>
+                        android:textColor="#1d9acf"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginLeft="5dp"
@@ -243,8 +242,7 @@
                         android:layout_height="wrap_content"
                         android:text="Tel"
                         android:textSize="20sp"
-                        android:textColor="#FF062E3F"
-                        android:textStyle="bold"/>
+                        android:textColor="#1d9acf"/>
                 </LinearLayout>
             </LinearLayout>
 

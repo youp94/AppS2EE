@@ -1,8 +1,12 @@
 package com.s2ee.etic.apps2ee;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -68,10 +72,32 @@ public class ShowActivity extends AppCompatActivity {
         mail.setText(Ecurrent.getMail());
 
         tel = (TextView) findViewById(R.id.tel);
-        tel.setText(Ecurrent.getTel());
+        SpannableString content1 = new SpannableString("+213"+Ecurrent.getTel());
+        content1.setSpan(new UnderlineSpan(), 0, ("+213"+Ecurrent.getTel()).length(), 0);
+        tel.setText(content1);
+        tel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
 
         web = (TextView) findViewById(R.id.site);
-        web.setText(Ecurrent.getWebsite());
+        SpannableString content = new SpannableString(Ecurrent.getWebsite());
+        content.setSpan(new UnderlineSpan(), 0, Ecurrent.getWebsite().length(), 0);
+        web.setText(content);
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = Ecurrent.getWebsite();
+                if (!url.startsWith("http://") && !url.startsWith("https://"))
+                    url = "http://" + url;
+                Intent viewIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse(url));
+                startActivity(viewIntent);
+            }
+        });
 
         adr = (TextView) findViewById(R.id.adresse);
         adr.setText(Ecurrent.getAdresse());
